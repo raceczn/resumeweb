@@ -1,4 +1,4 @@
-import { NewsletterSignUp } from "@/app/components/NewsletterSignUp";
+import { NewsletterSignUp } from "@/app/components/GetTouch";
 
 import { GridWrapper } from "@/app/components/GridWrapper";
 import { ProfilePicture } from "@/app/components/ProfilePicture";

@@ -17,7 +17,7 @@ export function BentoCard({
   height = "h-auto",
   rowSpan = 8,
   colSpan = 7,
-  className = "",
+  className = "h-auto",
   showHoverGradient = true,
   hideOverflow = true,
   linkTo,

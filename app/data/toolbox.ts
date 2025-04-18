@@ -11,121 +11,139 @@ type Skills_Stack = {
 const Skills_Stack: Skills_Stack[] = [
   {
     title: "HTML",
-    imgSrc: "/skills/html5.svg",
+    imgSrc: "/images/skills/html5.svg",
   },
   {
     title: "CSS",
-    imgSrc: "/skills/css3.svg",
+    imgSrc: "/images/skills/css3.svg",
   },
   {
     title: "SCSS",
-    imgSrc: "/skills/scss.png",
+    imgSrc: "/images/skills/scss.png",
   },
   {
     title: "Bootstrap",
-    imgSrc: "/skills/bootstrap5.svg",
+    imgSrc: "/images/skills/bootstrap5.svg",
   },
   {
     title: "Tailwind CSS",
-    imgSrc: "/skills/tailwindcss.svg",
+    imgSrc: "/images/skills/tailwindcss.svg",
   },
   {
     title: "JavaScript",
-    imgSrc: "/skills/js.svg",
+    imgSrc: "/images/skills/js.svg",
   },
   {
     title: "TypeScript",
-    imgSrc: "/skills/typescript.svg",
+    imgSrc: "/images/skills/typescript.svg",
   },
   {
     title: "React",
-    imgSrc: "/skills/reactjs.svg",
+    imgSrc: "/images/skills/reactjs.svg",
   },
   {
     title: "Next.js",
-    imgSrc: "/skills/nextjs.svg",
+    imgSrc: "/images/skills/nextjs.png",
   },
   {
     title: "Node.js",
-    imgSrc: "/skills/nodejs.svg",
+    imgSrc: "/images/skills/nodejs.svg",
+  },
+  {
+    title: "Express.js",
+    imgSrc: "/images/skills/expressjs.png",
   },
   {
     title: "Python",
-    imgSrc: "/skills/python.svg",
+    imgSrc: "/images/skills/python.svg",
   },
   {
     title: "Java",
-    imgSrc: "/skills/java.svg",
+    imgSrc: "/images/skills/java.svg",
   },
   {
     title: "PHP",
-    imgSrc: "/skills/php.svg",
+    imgSrc: "/images/skills/php.svg",
+  },
+  {
+    title: "Laravel",
+    imgSrc: "/images/skills/laravel.png",
   },
   {
     title: "Django",
-    imgSrc: "/skills/django.png",
+    imgSrc: "/images/skills/django.png",
   },
  
   {
     title: "MySQL",
-    imgSrc: "/skills/mysql.svg",
+    imgSrc: "/images/skills/mysql.svg",
   },
   {
     title: "MongoDB",
-    imgSrc: "/skills/mongodb.svg",
+    imgSrc: "/images/skills/mongodb.svg",
   },
   {
     title: "Flutter",
-    imgSrc: "/skills/flutter.svg",
+    imgSrc: "/images/skills/flutter.svg",
   },
   {
     title: "Dart",
-    imgSrc: "/skills/dart.svg",
+    imgSrc: "/images/skills/dart.svg",
+  },
+  {
+    title: "Jikan API",
+    imgSrc: "/images/skills/jikanAPI.png",
   },
 ];
 
 const TOOL_STACKS: TOOL_STACKS[] = [
   {
     title: "VS Code",
-    imgSrc: "/skills/vscode.svg",
+    imgSrc: "/images/skills/vscode.svg",
   },
   {
     title: "Figma",
-    imgSrc: "/skills/figma.svg",
+    imgSrc: "/images/skills/figma.svg",
   },
   {
     title: "Canva",
-    imgSrc: "/skills/canva.svg",
+    imgSrc: "/images/skills/canva.svg",
   },
   {
     title: "Framer",
-    imgSrc: "/skills/framer.svg",
+    imgSrc: "/images/skills/framer.svg",
   },
   {
     title: "Github",
-    imgSrc: "/skills/github.svg",
+    imgSrc: "/images/skills/github.svg",
   },
   {
     title: "Git",
-    imgSrc: "/skills/git.svg",
+    imgSrc: "/images/skills/git.svg",
   },
   {
     title: "Miro",
-    imgSrc: "/skills/miro.png",
+    imgSrc: "/images/skills/miro.png",
   },
   {
     title: "Notion",
-    imgSrc: "/skills/notion.png",
+    imgSrc: "/images/skills/notion.png",
   },
   {
     title: "Microsoft",
-    imgSrc: "/skills/microsoft.svg",
+    imgSrc: "/images/skills/microsoft.svg",
+  },
+  {
+    title: "Microsoft Ofiice",
+    imgSrc: "/images/skills/microsoft_office.png",
   },
   {
     title: "Microsoft Teams",
-    imgSrc: "/skills/msteams.png",
+    imgSrc: "/images/skills/msteams.png",
   },
   
 ];
 
-export { TOOL_STACKS, Skills_Stack };
+
+
+export {TOOL_STACKS, Skills_Stack };

@@ -1,5 +1,5 @@
 import { BgGradient } from "./components/BgGradient";
-import { NewsletterSignUp } from "./components/NewsletterSignUp";
+import { GetinTouch } from "./components/GetTouch";
 import { ChangelogBento } from "./components/ChangelogBento";
 import { fetchAndSortBlogPosts } from "./lib/utils";
 import { SpeakingBento } from "./components/SpeakingBento";
@@ -28,6 +28,7 @@ export default async function Home() {
 
   return (
     <section>
+      <title>Intro | Rances Cuizon</title>
       <AnimatedProfilePicture delay={PROFILE_DELAY} />
       <div className="mt-6 space-y-10 md:mt-0 md:space-y-16">
         <section>
@@ -168,8 +169,8 @@ export default async function Home() {
                   Life Beyond Code
                 </h2>
                 <p className="mb-6 text-base leading-8 text-text-secondary">
-                  I am the second eldest among four siblings, all of us are boys.
-                  Growing up in a big family has shaped my perspective on
+                  I am the second eldest among four siblings, all of us are
+                  boys. Growing up in a big family has shaped my perspective on
                   collaboration and responsibility. Our home is always filled
                   with energy, and the experience of having so many brothers has
                   taught me how to navigate different personalities, solve
@@ -198,9 +199,8 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
         <section>
-          <NewsletterSignUp />
+          <GetinTouch />
         </section>
       </div>
     </section>

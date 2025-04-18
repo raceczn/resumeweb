@@ -1,5 +1,5 @@
 import { ShadowBox } from "@/app/components/ShadowBox";
-import { NewsletterSignUp } from "@/app/components/NewsletterSignUp";
+import { NewsletterSignUp } from "@/app/components/GetTouch";
 import { Button } from "@/app/components/Button";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@/app/components/Tabs";
 import { Photo } from "@/app/components/Photo";

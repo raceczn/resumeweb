@@ -4,66 +4,37 @@ import { Timeline } from "./Timeline";
 const resumeData: ResumeData = {
   experiences: [
     {
-      company: "LogicGate",
+      company: "Cavite State University",
       period: "2022 - Present",
       positions: [
         {
-          title: "Frontend Developer III",
+          title: "Bachelor of Science in Computer Science",
           description: [
-            "I lead feature development on a team by analyzing requirements, designing solutions, and assist in evolving the frontend chapter of our organization.",
-          ],
-        },
-        {
-          title: "Frontend Developer II",
-          description: [
-            "I joined LogicGate and immediately took charge of feature development on my team while also assisting other frontend developers in the organization.",
+            "Attended seminars and workshops on emerging technologies to stay up to date with the field.",
+            "Lead and Project Manager for multiple group projects, implementing real-world solutions, and enhancing programming skills.",
           ],
         },
       ],
     },
     {
-      company: "Cognizant",
-      period: "2019 - 2021",
+      company: "Udemy",
+      period: "Jan 2025 - April 2025",
       positions: [
         {
-          title: "Senior Fullstack Developer",
+          title: "Web Development Bootcamp",
           description: [
-            "I designed and developed full-stack RESTful microservices using Netflix OSS, Java, Spring Boot, SQL, Angular, React, and Vue.",
-            "I led development teams, utilizing extreme programming principles such as agile, test-driven development, and paired programming.",
-            "I spearheaded the information architecture and developed a reusable UI component library for healthcare clients.",
-            "I led over 650 developers through a monthly enablement process, training them for client work on the Digital Engineering stack.",
+            "Built real web apps with HTML5, CSS3, Bootstrap, TailwindCSS, and JavaScript",
+            "Created responsive and accessible layouts, deployed apps, and worked with databases.",
+            "Learned about web development best practices, including performance optimization and security.",
+            "Created a full-stack app using Node, Express, and MongoDB.",
+            "Tested APIs with Postman and managed dependencies using the command line.",
           ],
         },
       ],
     },
-    {
-      company: "projekt202",
-      period: "2018 - 2019",
-      positions: [
-        {
-          title: "UI Developer",
-          description: [
-            "I assisted in developing a reusable UI component library and worked closely with a multi-million dollar airline client to gather requirements.",
-            "My responsibility included developing solutions for enterprise clients worth millions of dollars, using Angular 7 for the frontend.",
-          ],
-        },
-      ],
-    },
-    {
-      company: "Major 4 Apps",
-      period: "2018 - 2019",
-      positions: [
-        {
-          title: "Founder & Developer",
-          description: [
-            "I developed custom applications for clients, designed, developed, tested, and supported mobile applications on iOS and Android platforms.",
-            "My mobile game ranked among the top 200 on the Amazon App Store.",
-          ],
-        },
-      ],
-    },
+   
   ],
-  avatarUrl: "/braydon_headshot_1.jpeg",
+  avatarUrl: "/images/rancesp.png",
 };
 
 export function Resume() {

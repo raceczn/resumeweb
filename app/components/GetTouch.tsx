@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
-
-export function NewsletterSignUp({ className }: { className?: string }) {
+export function GetinTouch({ className }: { className?: string }) {
   return (
     <section className={`bg-gradient-to-r from-black via-gray-900 to-black w-full ${className || ""}`}>
       <div className="max-w-screen-lg mx-auto px-4 flex flex-col items-center justify-center py-16 text-center space-y-6 md:rounded-lg">

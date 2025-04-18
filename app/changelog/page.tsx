@@ -1,5 +1,5 @@
 import { MDXContent } from "@/app/components/mdx";
-import { NewsletterSignUp } from "@/app/components/NewsletterSignUp";
+import { NewsletterSignUp } from "@/app/components/GetTouch";
 import { fetchAndSortChangelogPosts } from "@/app/lib/utils";
 import { GridWrapper } from "@/app/components/GridWrapper";
 

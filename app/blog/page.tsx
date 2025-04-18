@@ -2,7 +2,7 @@ import {
   extractUniqueBlogCategories,
   fetchAndSortBlogPosts,
 } from "app/lib/utils";
-import { NewsletterSignUp } from "@/app/components/NewsletterSignUp";
+import { NewsletterSignUp } from "@/app/components/GetTouch";
 import { BlogPostList } from "@/app/components/BlogPostList";
 import { CategorySelect } from "@/app/components/CategorySelect";
 import { FeaturedBlogCard } from "@/app/components/FeaturedBlogCard";
