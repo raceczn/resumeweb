@@ -11,12 +11,15 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   description: siteMetadata.description,
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
     images: [
       {
-        url: "", 
+        url: "",
         width: 1200,
         height: 630,
         alt: siteMetadata.title,
@@ -42,7 +45,7 @@ export default function RootLayout({
       className={`bg-bg-primary ${GeistMono.variable} ${GeistSans.variable}`}
     >
       <body className="flex min-h-screen flex-col font-sans md:max-w-7xl lg:mx-auto lg:flex-row">
-        <main 
+        <main
           className={cx(
             "relative flex flex-1 flex-col overflow-x-hidden border-x border-border-primary/50 pt-12",
           )}

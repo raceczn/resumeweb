@@ -16,7 +16,7 @@ export const siteMetadata = {
   twitterHandle: "@raceczn",
   codepen: "https://codepen.io/braydoncoyer",
   // linkedin: "https://www.linkedin.com/in/braydon-coyer/",
-  resume: "/static/braydoncoyer_resume.pdf",
+  resume: "/curriculum-vitae.pdf",
   snippets:
     "https://www.notion.so/9f35162787e0448094188b66304cf9f6?v=1b9c4e146edf46148fe7b1c5346cbea4",
   // carbonCode: "CESDE27N",
