@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAnyWhere, useMediaQuery } from "usehooks-ts";
 
@@ -23,23 +23,28 @@ function Sticker({
   className?: string;
   preventYOffsetOnMobile?: boolean;
 }) {
-  // Create refs for the sticker and caption, and set up measurement of elements
   const itemRef = useRef<HTMLDivElement | null>(null);
   const boundingRect = useElementBoundingRect(itemRef);
 
-  // Manage state of stickers
   const [isDragging, setIsDragging] = useState<Boolean>(false);
   const [isCaptionVisible, setIsCaptionVisible] = useState<Boolean>(false);
   const [isModal, setIsModal] = useState<Boolean>(false);
+  const [isMounted, setIsMounted] = useState<Boolean>(false);
 
-  // Set up initial values persisted in state even while dragging
-  const [initialRotation] = useState<number>(getRandomNumberInRange(-15, 15));
-  const [initialY] = useState<number>(
-    getRandomNumberInRange(10, 25) *
-      (index === 0 ? 1 : index % 2 === 0 ? -0.5 : 0.5),
-  );
+  // State hooks for dynamic values
+  const [initialRotation, setInitialRotation] = useState<number>(0);
+  const [initialY, setInitialY] = useState<number>(0);
 
-  // Handle smaller devices with different behavior
+  useEffect(() => {
+    setIsMounted(true);
+    // Set random values after the component mounts on the client side
+    setInitialRotation(getRandomNumberInRange(-15, 15));
+    setInitialY(
+      getRandomNumberInRange(10, 25) *
+        (index === 0 ? 1 : index % 2 === 0 ? -0.5 : 0.5),
+    );
+  }, []);
+
   const matches = useMediaQuery("(max-width: 768px)");
 
   function onOpen() {
@@ -51,7 +56,6 @@ function Sticker({
 
   function onStart() {
     if (!matches) {
-      // setDirty && setDirty(true)
       setIsCaptionVisible(true);
       setIsDragging(true);
     }
@@ -76,7 +80,6 @@ function Sticker({
     }
   });
 
-  // Setup rotation based on speed of drag
   const { rotate, x } = useRotationVelocity(initialRotation);
 
   const stickerVariants = {
@@ -92,6 +95,8 @@ function Sticker({
       zIndex: 1000,
     },
   };
+
+  if (!isMounted) return null;
 
   return (
     <motion.div
@@ -191,7 +196,13 @@ export function ScrapbookBento({ className }: { className?: string }) {
       showHoverGradient={false}
       hideOverflow={false}
     >
-      <h2 className="mb-2 font-medium">Scrapbook</h2>
+      <h2 className="mb-2 animate-gradient-shift mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-lg font-semibold text-transparent">
+        Wishlist{" "}
+        <span className="ml-1 cursor-pointer text-[0.7rem] italic text-gray-500 underline-offset-4 transition-all duration-300 hover:text-blue-600 hover:underline">
+          (give it a hover ✨)
+        </span>
+      </h2>
+
       <div className="absolute top-0 h-[220px] w-full overflow-hidden bg-[radial-gradient(#e5e7eb_1px,transparent_2px)] [background-size:14px_14px] [mask-image:radial-gradient(ellipse_80%_70%_at_50%_50%,black_40%,transparent_100%)]"></div>
       <div
         key={resetIndex}
@@ -207,45 +218,45 @@ export function ScrapbookBento({ className }: { className?: string }) {
           className="-mt-8 grid h-full w-full grid-cols-4 items-center gap-4"
         >
           <Sticker
-            caption="THAT Conference was my favorite tech event of 2024! I even kicked off my speaking season with my very first talk of the year there!"
+            caption="I want to pursue a career as a web or software developer."
             index={0}
           >
             <img
               width="80"
-              src="/that_conf_sticker.png"
+              src="/images/future/developer.png"
               className="xs:max-w-none max-w-[100px]"
               draggable={false}
             />
           </Sticker>
           <Sticker
-            caption={`I became an international speaker at C3 Dev Fest, where I shared insights on "The Power of a Second Brain in a Developer's Workflow."`}
+            caption="Of course, my first goal is to graduate from Cavite State University (CvSU) with a degree in Computer Science."
             index={1}
           >
             <img
               width="96"
-              src="c3_conf_sticker.png"
+              src="images/future/cvsu.png"
               className="xs:max-w-none max-w-[100px]"
               draggable={false}
             />
           </Sticker>
           <Sticker
-            caption="I'm a huge Lord of the Rings nerd and host an epic 3-day marathon every year to watch the extended editions with friends and family."
+            caption="One of my biggest dreams is to work at Google someday."
             index={2}
           >
             <img
               width="130"
-              src="/lotr_sticker.png"
+              src="/images/future/google.png"
               className=""
               draggable={false}
             />
           </Sticker>
           <Sticker
-            caption="I helped create, organize, and speak at the inaugural Commit Your Code Conference in 2024, where every penny went to charity!"
+            caption="I aim to earn my AWS Certified Cloud Practitioner certification to deepen my knowledge in cloud computing."
             index={3}
           >
             <img
               width="160"
-              src="/cyc_sticker.png"
+              src="/images/future/aws_cert.png"
               draggable={false}
               className="xs:max-w-none"
             />

@@ -9,14 +9,12 @@ import { CirclePattern } from "./SpeakingBento";
 import { getCurrentlyPlaying } from "@/app/db/actions";
 
 const favorite: CurrentlyPlaying = {
-  artist: "Bear McCreary",
-  albumName: "The Lord of the Rings: The Rings of Power",
-  albumId: "2Oe6kYDU9YQhun0YrXL9eV",
-  artistId: "2ifvIECHAlEgPMBuBOJ0lG",
-  title: "The Sun Yet Shines",
+  artist: "The Weeknd",
+  albumName: "The Starboy",
+  title: "Starboy",
   albumImageUrl:
-    "https://i.scdn.co/image/ab67616d0000b2735cf2a1df961de6e7d7d3c113",
-  songUrl: "https://open.spotify.com/track/5hcRWT88VLlbhEMh4efCMy",
+    "images/future/starboy.jpg",
+  songUrl: "https://open.spotify.com/track/7MXVkk9YMctZqd1Srtv4MB?si=4015e590d1c64324",
   isPlaying: false,
 };
 
@@ -44,7 +42,7 @@ export function CurrentlyPlayingBento() {
   }
 
   return (
-    <BentoCard height="h-[300px]">
+    <BentoCard height="h-[200px]">
       <div className="flex flex-col">
         <div className="z-10 h-full">
           <div className="flex h-full flex-col justify-between">
@@ -53,23 +51,9 @@ export function CurrentlyPlayingBento() {
             </h2>
             <p className="max-h-[150px] overflow-hidden text-base text-text-secondary">
               <span className="line-clamp-4 text-ellipsis">
-                I&apos;m listening to{" "}
+                {/* I&apos;m listening to{" "} */}
                 <a className="font-semibold" href={currentTrack.songUrl}>
                   {currentTrack.title}
-                </a>{" "}
-                by{" "}
-                <a
-                  className="font-semibold"
-                  href={`https://open.spotify.com/artist/${currentTrack.artistId}`}
-                >
-                  {currentTrack.artist}
-                </a>{" "}
-                from the album{" "}
-                <a
-                  className="font-semibold"
-                  href={`https://open.spotify.com/album/${currentTrack.albumId}`}
-                >
-                  {currentTrack.albumName}
                 </a>
               </span>
             </p>

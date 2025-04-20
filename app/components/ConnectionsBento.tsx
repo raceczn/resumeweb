@@ -97,16 +97,16 @@ export function ConnectionsBento({
               </svg>
               <img
                 className="absolute left-1/2 top-1/2 h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 transform rounded-full"
-                src="/braydon_headshot_3.jpg"
-                alt=""
+                src="/images/rances.png"
+                alt="Meeee"
               />
             </div>
           </span>
 
           <span className="hidden md:block">
-            {/* Amy */}
+            {/* Seventeen */}
             <AnimatedConnectionCircle
-              src="/amy_dutton.jpg"
+              src="/images/future/seventeen.jpg"
               top="55%"
               left="23%"
               delay={0.1}
@@ -114,18 +114,18 @@ export function ConnectionsBento({
               controls={controls}
             />
 
-            {/* James Q Quick */}
+            {/* Cup of Joe */}
             <AnimatedConnectionCircle
-              src="/james_q_quick.jpg"
+              src="/images/future/cup-of-joe-ftr.jpg"
               top="53%"
               left="67%"
               delay={0.3}
               controls={controls}
             />
 
-            {/* Colby */}
+            {/* IU */}
             <AnimatedConnectionCircle
-              src="/colby_fayock.jpg"
+              src="/images/future/iu.jpeg"
               top="4%"
               left="32%"
               delay={0.2}
@@ -133,9 +133,9 @@ export function ConnectionsBento({
               controls={controls}
             />
 
-            {/* Sarah */}
+            {/* Park Bogum */}
             <AnimatedConnectionCircle
-              src="/sarah_drasner.jpg"
+              src="/images/future/bogum.png"
               top="15%"
               left="78%"
               delay={0.4}
@@ -143,9 +143,9 @@ export function ConnectionsBento({
               controls={controls}
             />
 
-            {/* Shashi */}
+            {/* Leni Robredo */}
             <AnimatedConnectionCircle
-              src="/shashi_lo.jpg"
+              src="/images/future/leniRobredo.png"
               top="5%"
               left="7%"
               delay={0.5}
@@ -161,8 +161,8 @@ export function ConnectionsBento({
               className="absolute left-4 top-6 md:left-24"
             >
               <img
-                className="rounded-full"
-                src="/shashi_lo.jpg"
+                className="h-full w-full rounded-full object-cover"
+                src="/images/future/leniRobredo.png"
                 alt="Connection"
               />
             </ConnectionCircle>
@@ -171,8 +171,8 @@ export function ConnectionsBento({
               className="absolute bottom-20 left-14 md:left-52"
             >
               <img
-                className="rounded-full"
-                src="/amy_dutton.jpg"
+                className="h-full w-full rounded-full object-cover"
+                src="/images/future/iu.jpeg"
                 alt="Connection"
               />
             </ConnectionCircle>
@@ -181,8 +181,8 @@ export function ConnectionsBento({
               className="absolute right-16 top-4 md:right-52"
             >
               <img
-                className="rounded-full"
-                src="/james_q_quick.jpg"
+                className="h-full w-full rounded-full object-cover"
+                src="/images/future/seventeen.jpg"
                 alt="Connection"
               />
             </ConnectionCircle>
@@ -191,17 +191,17 @@ export function ConnectionsBento({
               className="absolute bottom-20 right-4 md:right-12"
             >
               <img
-                className="rounded-full"
-                src="/colby_fayock.jpg"
+                className="h-full w-full rounded-full object-cover"
+                src="/images/future/cup-of-joe-ftr.jpg"
                 alt="Connection"
               />
             </ConnectionCircle>
           </span>
         </div>
         <div className="z-20 mt-auto w-full text-balance text-center">
-          <h2 className="text-base font-medium">Connections</h2>
+          <h2 className="text-base font-medium">People to meet</h2>
           <p className="mt-1 text-text-secondary">
-            An evolving list of people I&apos;ve met and those I wish to meet.
+            An evolving list of people I wish to meet someday.
           </p>
         </div>
       </div>
@@ -314,10 +314,9 @@ function ConnectionCircle({
     </div>
   );
 }
-
 function AnimatedConnectionCircle({
   src,
-  sizeClass = "w-16 h-16",
+  sizeClass = "w-16 h-16", // default size
   paddingClass = "p-1",
   top,
   left,
@@ -344,8 +343,12 @@ function AnimatedConnectionCircle({
       style={{ top, left }}
       className={`absolute ${sizeClass} ${paddingClass} z-10`}
     >
-      <ConnectionCircle sizeClass={sizeClass} paddingClass={paddingClass}>
-        <img className="rounded-full" src={src} alt="Connection" />
+      <ConnectionCircle sizeClass="w-full h-full" paddingClass={paddingClass}>
+        <img
+          className="h-full w-full rounded-full object-cover"
+          src={src}
+          alt="Connection"
+        />
       </ConnectionCircle>
     </motion.div>
   );

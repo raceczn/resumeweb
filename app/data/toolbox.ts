@@ -73,7 +73,7 @@ const Skills_Stack: Skills_Stack[] = [
     title: "Django",
     imgSrc: "/images/skills/django.png",
   },
- 
+
   {
     title: "MySQL",
     imgSrc: "/images/skills/mysql.svg",
@@ -122,28 +122,30 @@ const TOOL_STACKS: TOOL_STACKS[] = [
     imgSrc: "/images/skills/git.svg",
   },
   {
-    title: "Miro",
-    imgSrc: "/images/skills/miro.png",
-  },
-  {
     title: "Notion",
     imgSrc: "/images/skills/notion.png",
   },
+
   {
-    title: "Microsoft",
-    imgSrc: "/images/skills/microsoft.svg",
-  },
-  {
-    title: "Microsoft Ofiice",
+    title: "Office",
     imgSrc: "/images/skills/microsoft_office.png",
   },
   {
-    title: "Microsoft Teams",
+    title: "MS Teams",
     imgSrc: "/images/skills/msteams.png",
   },
-  
+  {
+    title: "Miro",
+    imgSrc: "/images/skills/miro.png",
+  },
+  //   {
+  //   title: "Microsoft",
+  //   imgSrc: "/images/skills/microsoft.svg",
+  // },
+  {
+    title: "Vercel",
+    imgSrc: "/images/skills/vercel.png",
+  },
 ];
 
-
-
-export {TOOL_STACKS, Skills_Stack };
+export { TOOL_STACKS, Skills_Stack };

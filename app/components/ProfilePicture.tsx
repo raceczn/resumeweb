@@ -10,7 +10,7 @@ export function ProfilePicture() {
   const changeImage = () => {
     setIsChanging(true);
     const images = [
-      "/images/rancesp.png"
+      "/images/rances.png"
       
     ];
     const availableImages = images.filter((img) => img !== imageSrc);

@@ -11,7 +11,7 @@ interface SkillCardProps {
 const SkillCard = ({ name, imgSrc }: SkillCardProps) => {
   return (
     <div className="px-2">
-      <div className="flex items-center w-full space-x-2 rounded-full border border-neutral-300  px-4 py-2 shadow-sm ">
+      <div className="flex items-center w-full space-x-2 rounded-full border border-neutral-300  px-2 py-2 shadow-sm ">
         <img src={imgSrc} alt={name} className="h-6 w-6 object-contain" />
         <div className="whitespace-nowrap">{name}</div>
       </div>

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export function GetinTouch({ className }: { className?: string }) {
   return (
     <section className={`bg-gradient-to-r from-black via-gray-900 to-black w-full ${className || ""}`}>
@@ -8,9 +10,11 @@ export function GetinTouch({ className }: { className?: string }) {
         <p className="text-white/75 w-full md:max-w-xl">
           Whether you're searching for a dedicated partner to develop your project or simply need expert support, I'm here to help.
         </p>
-        <button className="px-6 py-3 text-lg border border-white rounded-md text-white hover:bg-white hover:text-black transition-colors">
-          Get in Touch
-        </button>
+        <Link href="/contact" aria-label="Contact">
+          <button className="px-6 py-3 text-lg border border-white rounded-md text-white hover:bg-white hover:text-black transition-colors">
+            Get in Touch
+          </button>
+        </Link>
       </div>
     </section>
   );

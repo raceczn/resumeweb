@@ -9,7 +9,7 @@ export interface Experience {
   positions: Position[];
 }
 
-export interface ResumeData {
+export interface TrainingData {
   experiences: Experience[];
   avatarUrl: string;
 }

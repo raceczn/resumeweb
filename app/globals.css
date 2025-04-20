@@ -243,16 +243,46 @@ blockquote p {
   transform-origin: 70% 70%;
 }
 
-@keyframes scroll-left {
+@keyframes lightningRun {
   0% {
-    transform: translateX(0);
+    background-position: 0% 50%;
   }
   100% {
-    transform: translateX(-50%);
+    background-position: 100% 50%;
   }
 }
 
-.animate-scroll-left {
-  animation: scroll-left 25s linear infinite;
+.lightning-border {
+  background: linear-gradient(270deg, #e0e7ff, #ede9fe, #ddd6fe); /* light indigo/violet tones */
+  background-size: 300% 300%;
+  animation: lightningRun 2s linear infinite;
+  border-radius: 0.75rem;
+  padding: 2px;
+  box-shadow: 0 0 2px #c7d2fe, 0 0 4px #e9d5ff;
+}
+.typing-dots span {
+  opacity: 0;
+  animation: dot-appear 1.5s infinite;
 }
 
+.typing-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.typing-dots span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes dot-appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

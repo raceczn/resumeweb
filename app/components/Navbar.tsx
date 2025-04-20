@@ -13,11 +13,12 @@ type NavigationLink = {
 
 const navigationLinks: readonly NavigationLink[] = [
   { name: "Intro", link: "/" },
-  { name: "Skills", link: "/toolbox" },
+  { name: "Skills", link: "/skills" },
   { name: "Projects", link: "/projects" },
-  { name: "Challenges", link: "/about" },
-  // { name: "Blog", link: "/blog" },
-  // { name: "Speaking", link: "/speaking" },
+  { name: "Journey", link: "/journey" },
+  { name: "Future Plans", link: "/future_plans" },
+  { name: "Resume", link: "/resume" },
+  { name: "Contact", link: "/contact" },
 ] as const;
 
 const Navbar: React.FC = () => {
@@ -47,12 +48,13 @@ function DesktopNav() {
       <div className="w-[104px]">
         <Link href="/" aria-label="Home">
           <img
-            className="h-6 w-6"
-            src="/bcoyerlogo_dark.svg"
-            alt="Braydon's Logo"
+            className="h-10 w-10 rounded-full object-cover transition-transform duration-300 hover:scale-105"
+            src="/images/icon2.svg"
+            alt="Rances' Logo"
           />
         </Link>
       </div>
+
       <ul className="flex place-items-center space-x-4 rounded-full border border-border-primary px-5 py-2 text-sm text-gray-500">
         {navigationLinks.map((link) => (
           <li key={link.name}>
@@ -140,9 +142,9 @@ const NavLogo: React.FC<NavLogoProps> = ({ onClickCallback }) => {
   return (
     <Link href="/" onClick={() => onClickCallback(false)} aria-label="Home">
       <img
-        className="h-8 w-8"
-        src="/bcoyerlogo_dark.svg"
-        alt="Braydon's Logo"
+        className="h-8 w-8 rounded-full object-cover"
+        src="/images/icon2.svg"
+        alt="Rances's Logo"
       />
     </Link>
   );

@@ -1,19 +1,10 @@
-import { BgGradient } from "./components/BgGradient";
 import { GetinTouch } from "./components/GetTouch";
-import { ChangelogBento } from "./components/ChangelogBento";
 import { fetchAndSortBlogPosts } from "./lib/utils";
-import { SpeakingBento } from "./components/SpeakingBento";
-import { CommunityWallBento } from "./components/CommunityWallBento";
-import { CalendarBento } from "./components/CalendarBento";
-import { FeaturedBlogCard } from "./components/FeaturedBlogCard";
-import { ConnectionsBento } from "./components/ConnectionsBento";
 import { AnimatedProfilePicture } from "./components/AnimatedProfilePicture";
 import { AnimatedText } from "./components/AnimatedText";
 import { PhotoGallery } from "./components/PhotoGallery";
-import { AboutMeBento } from "./components/AboutMeBento";
 import { AnimatedMobilePhotos } from "./components/AnimatedMobilePhotos";
 import { GridWrapper } from "./components/GridWrapper";
-import clsx from "clsx";
 import { ShadowBox } from "@/app/components/ShadowBox";
 import { AboutTrackPattern } from "@/app/components/AboutTrackPattern";
 
@@ -62,7 +53,7 @@ export default async function Home() {
                   Passionate software developer who loves designing and creating
                   innovative solutions for both mobile and web platforms.
                   Slightly addicted to chocolate, and not a fan of{" "}
-                  <span className="inline-block font-bold text-blue-500">
+                  <span className="inline-block text-xl font-bold text-blue-500">
                     C<span className="inline-block rotate-0 transform">S</span>
                     <span className="inline-block translate-y-1 rotate-[25deg] align-baseline">
                       S
@@ -87,16 +78,26 @@ export default async function Home() {
         <div className="relative space-y-8 text-center">
           <div className="space-y-4">
             <GridWrapper>
-              <div className="text-center text-sm font-medium text-indigo-600">
+              <AnimatedText
+                as="div"
+                delay={PHOTOS_DELAY + 0.2}
+                className="text-center text-sm font-medium text-indigo-600"
+              >
                 <span>Get to know me.</span>
-              </div>
+              </AnimatedText>
             </GridWrapper>
+
             <GridWrapper>
-              <h2 className="mx-auto max-w-xl text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary">
-                Here&apos;s a quick intro about me and what I love to do
-              </h2>
+              <AnimatedText
+                as="h2"
+                delay={PHOTOS_DELAY + 0.3}
+                className="mx-auto max-w-xl text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary"
+              >
+                Here's a quick intro about me and what I love to do
+              </AnimatedText>
             </GridWrapper>
           </div>
+
           <div className="relative h-fit w-full overflow-hidden">
             <div className="absolute left-0 top-0 w-full md:left-4 lg:left-[355px] xl:left-[455px]">
               <AboutTrackPattern />

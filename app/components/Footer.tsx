@@ -18,30 +18,9 @@ const footerSections: FooterSection[] = [
     title: "General",
     links: [
       { href: "/", label: "Home" },
-      { href: "/about", label: "About" },
+      { href: "/skills", label: "Skills" },
       { href: "/projects", label: "Projects" },
-      { href: "/blog", label: "Blog" },
-    ],
-  },
-  {
-    title: "Specifics",
-    links: [
-      { href: "/toolbox", label: "Toolbox" },
-      { href: "/speaking", label: "Speaking" },
-      {
-        href: "https://braydoncoyer.lemonsqueezy.com/",
-        label: "Products",
-        isExternal: true,
-      },
-      { href: "/community-wall", label: "Community Wall" },
-    ],
-  },
-  {
-    title: "Extra",
-    links: [
-      { href: "/changelog", label: "Changelog" },
-      { href: "/connections", label: "Connections" },
-      { href: "/links", label: "Links" },
+      { href: "/contact", label: "Contact" },
     ],
   },
 ];
@@ -66,11 +45,11 @@ export function Footer(): JSX.Element {
             <div className="flex w-full py-6 text-sm">
               <div>
                 <div className="flex-grow space-y-6">
-                  <Link className="inline-block" href="/">
+                  <Link href="/" aria-label="Home">
                     <img
-                      className="h-10 w-10"
-                      src="/bcoyerlogo_dark.svg"
-                      alt="Braydon's Logo"
+                      className="h-10 w-10 rounded-full object-cover transition-transform duration-300 hover:scale-105"
+                      src="/images/icon2.svg"
+                      alt="Rances' Logo"
                     />
                   </Link>
                   <p className="w-60 leading-5 text-gray-500">
@@ -101,6 +80,22 @@ export function Footer(): JSX.Element {
                     </ul>
                   </div>
                 ))}
+                <div>
+                  <span className="mb-4 inline-block text-base font-medium text-text-primary">
+                    Vibes 🎵
+                  </span>
+                  <div className="w-[300px]">
+                    <iframe
+                      style={{ borderRadius: "12px" }}
+                      src="https://open.spotify.com/embed/track/5GXAXm5YOmYT0kL5jHvYBt?utm_source=generator"
+                      width="100%"
+                      height="100"
+                      frameBorder="0"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -17,14 +17,14 @@ export function BentoCard({
   height = "h-auto",
   rowSpan = 8,
   colSpan = 7,
-  className = "h-auto",
+  className = "",
   showHoverGradient = true,
   hideOverflow = true,
   linkTo,
 }: BentoCardProps) {
   const cardContent = (
     <div
-      className={`group relative flex flex-col rounded-2xl border border-border-primary bg-bg-primary p-6 hover:bg-white ${
+      className={`group relative flex flex-col rounded-2xl border border-gray-300 bg-bg-primary p-6 hover:bg-white ${
         hideOverflow && "overflow-hidden"
       } ${height} row-span-${rowSpan} col-span-${colSpan} ${className}`}
     >

@@ -16,7 +16,7 @@ const MarqueeElement = ({
   return (
     <Marquee
       direction={direction}
-      speed={18}
+      speed={20}
       gradient={false}
       className={withPadding ? "py-3" : ""}
     >

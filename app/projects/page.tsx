@@ -103,9 +103,10 @@ const projects: Project[] = [
     stacks: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
   },
 ];
+
 function ProjectImage(props) {
   return (
-    <img src={props.src} alt={props.alt} className="drama-shadow rounded-xl" />
+    <img src={props.src} alt={props.alt} className="drama-shadow rounded-lg" />
   );
 }
 
@@ -130,23 +131,23 @@ export default function ProjectPage() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-md transition hover:shadow-lg"
+              className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-[#F8FAFC] hover:bg-[#FBFBFB] p-4 shadow-md transition hover:shadow-lg"
             >
               <div className="mb-4">
                 <ProjectImage src={project.image} alt={project.title} />
               </div>
               <div className="flex flex-1 flex-col">
                 <div className="mb-4">
-                  <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">
+                  <h2 className="mb-3 text-xl font-semibold leading-snug text-gray-800 md:text-[1.375rem]">
                     {project.title}
                   </h2>
-                  <p className="text-base text-text-secondary">
+                  <p className="text-justify text-sm text-text-secondary">
                     {project.description}
                   </p>
                 </div>
                 <div className="mt-auto">
                   <div className="mb-3 flex flex-wrap gap-2">
-                    <span className="text-sm font-medium text-gray-500">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
                       Tech Stack:
                     </span>
                     {project.stacks.map((stack) => {
@@ -168,16 +169,16 @@ export default function ProjectPage() {
                     })}
                   </div>
 
-                  <div className="flex items-center gap-4 border-t border-gray-100 pt-3">
+                  <div className="flex items-center gap-4 border-t border-gray-100 pt-4">
                     {project.github && (
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-indigo-700 hover:text-indigo-800 hover:underline"
+                        className="inline-flex items-center rounded-lg bg-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-100 hover:text-indigo-600"
                         title="GitHub Repository"
                       >
-                        <GithubIcon size={15} className="mr-1" />
+                        <GithubIcon size={16} className="mr-2" />
                         Github Repo
                       </a>
                     )}
@@ -187,10 +188,10 @@ export default function ProjectPage() {
                         href={project.live_demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-indigo-700 hover:text-indigo-800 hover:underline"
+                        className="ml-auto inline-flex items-center rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-indigo-700"
                         title="Live Demo"
                       >
-                        <LinkIcon size={15} className="mr-1" />
+                        <LinkIcon size={16} className="mr-2" />
                         Live Demo
                       </a>
                     )}
