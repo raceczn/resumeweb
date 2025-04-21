@@ -30,7 +30,7 @@ const presentationList: PresentationList = {
         title: "There was a time I wished I could pause life.",
         description: [
           "Not stop it—just pause it long enough to breathe, to feel, to be free without guilt.",
-          "It wasn’t that I hated what I was doing. In fact, I loved it. But somewhere along the way, the pressure became so loud, I couldn’t hear my own passion anymore. I was drowning in overlapping roles—juggling academic deadlines, freelance tasks, capstone system projects, and the unspoken expectations that come from being the second eldest in a hardworking Filipino family. Each day felt like a race I didn’t sign up for.",
+          "It wasn’t that I hated what I was doing. In fact, I loved it. But somewhere along the way, the pressure became so loud, I couldn’t hear my own passion anymore. I was drowning in overlapping roles—juggling academic deadlines, freelance tasks, system projects, and the unspoken expectations that come from being the second eldest in a hardworking Filipino family. Each day felt like a race I didn’t sign up for.",
           "Late nights weren’t quiet. They were filled with error logs, pending submissions, and internal breakdowns masked by a simple “Kaya pa.” I would stare at my screen—debugging not just code, but also my self-worth. I asked myself over and over, “Why can’t I get this right? Why does everyone else seem to be moving forward while I’m stuck?”",
         ],
       },
@@ -38,7 +38,7 @@ const presentationList: PresentationList = {
         subtitle: "",
         title: "The Silent Doubt",
         description: [
-          "There were moments I’d scroll through social media, seeing people share their wins—internships, bootcamp certificates, thriving small businesses, or their latest recognitions. I would smile, leave a supportive comment, even react with genuine pride for them. But deep down, I felt like I was falling behind. I wondered, “When will it be my turn?",
+          "There were moments when I’d scroll through social media, seeing people share their internships, bootcamp certificates, thriving small businesses, or latest achievements—and I couldn’t help but feel like I was already behind before I even had the chance to start. I smiled, reacted, and congratulated them. But deep down, I kept wondering, “When will it be my turn?",
         ],
       },
       {
@@ -46,7 +46,7 @@ const presentationList: PresentationList = {
         title:
           "The Weight No One Sees",
         description: [
-          "I grew up in a family that challengesd simply. We had enough to get by, but never enough to feel safe. There was always a line we walked between comfort and sacrifice. My parents worked incredibly hard—my mom even went abroad—just to make sure we had opportunities they never had. And as one of seven siblings, I learned early on not to ask for more than what was needed.",
+          "I grew up in a family that lived simply. We had enough to get by, but never quite enough to feel truly secure. There was always a line we walked between comfort and sacrifice. My parents worked incredibly hard—my mom even went abroad—just to make sure we had opportunities they never had. And as one of four siblings, I learned early on not to ask for more than what was needed.",
           "But understanding that reality didn’t make it any lighter.",
           "There were times we’d face sudden expenses—hospital bills, school payments, or emergencies—and I could see the tiredness in my parents’ eyes. They never made us feel the burden, but I felt it anyway. I carried it with me in silence. I knew that every small success I had wasn’t just for me—it was for them.",
           "So, I kept going.",
@@ -59,8 +59,8 @@ const presentationList: PresentationList = {
         subtitle: "",
         title: "The Other Side of the Story",
         description: [
-          "There were other battles too—not just academic or financial. I dealt with imposter syndrome, moments of isolation, burnout, and mental blocks that made even the simplest tasks feel impossible. There were days I didn’t feel creative, smart, or “enough.” I lost sleep. I missed meals. I skipped breaks because I thought “productivity” was the only way to prove myself.",
-          "But all of these brought lessons I now hold close to my heart."
+          "There were other battles too—not just with academic or financial. I had moments when I doubted myself deeply, like I wasn’t good enough no matter how hard I tried. I felt alone sometimes, struggled with burnout, and faced mental blocks that made even the simplest tasks feel too heavy. There were days when I didn’t feel smart, creative, or capable. I lost sleep, skipped meals, and pushed through without rest—thinking that staying busy was the only way to prove my worth.",
+          "But all those struggles taught me lessons I’ll never forget."
         ],
       },
     ],
@@ -133,7 +133,7 @@ export default function JourneyPage() {
   const timeOfDayGreeting = getTimeOfDayGreeting();
   return (
     <div className="relative mt-14">
-      <title>Challenges & Learnings | Braydon Coyer</title>
+      <title>Challenges & Learnings | Rances Cuizon</title>
       <div className="relative space-y-10 md:space-y-16">
         {/* Title */}
         <GridWrapper className="space-y-12">
