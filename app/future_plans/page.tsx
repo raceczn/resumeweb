@@ -164,8 +164,8 @@ export default function FuturePlansPage() {
         <GridWrapper>
           <div className="text-center text-sm font-medium text-indigo-700">
             <span>
-              My future goals aren’t just about work — I want to careergoals a
-              meaningful and balanced life.
+              It&apos;s not just about building a career; I want a life filled
+              with purpose and balance.
             </span>
           </div>
         </GridWrapper>
@@ -264,13 +264,9 @@ export default function FuturePlansPage() {
             ))}
           </section>
 
-            
-
           <section className="relative space-y-16">
             <div className="text-center text-sm font-medium text-indigo-700">
-              <span>
-                Collection of my Wishlist and Plans!
-              </span>
+              <span>Collection of my Wishlist and Plans!</span>
             </div>
             {/* Plann */}
             <GridWrapper>
@@ -307,7 +303,6 @@ export default function FuturePlansPage() {
               </div>
             </GridWrapper>
           </section>
-          
         </div>
       </div>
     </div>
