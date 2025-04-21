@@ -6,6 +6,8 @@ import { Skills_Stack, TOOL_STACKS } from "@/app/data/toolbox";
 import Image from "next/image";
 import SkillList from "../components/SkillList";
 import { Suspense } from "react";
+import { ScrollToTopButton } from "@/app/components/ScrollToTopButton";
+
 
 export default function SkillsPage() {
   return (
@@ -126,6 +128,8 @@ export default function SkillsPage() {
         <br />
         <br />
       </div>
+      <ScrollToTopButton />
+
     </div>
   );
 }

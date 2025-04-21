@@ -3,6 +3,8 @@ import { getTimeOfDayGreeting } from "app/lib/utils";
 import React from "react";
 import { GridWrapper } from "@/app/components/GridWrapper";
 import { Photo } from "@/app/components/Photo";
+import { ScrollToTopButton } from "@/app/components/ScrollToTopButton";
+
 
 type journey = {
   subtitle: string;
@@ -285,6 +287,7 @@ export default function JourneyPage() {
           </section>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

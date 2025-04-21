@@ -3,6 +3,8 @@ import { FiExternalLink as LinkIcon } from "react-icons/fi";
 import { GridWrapper } from "@/app/components/GridWrapper";
 import { Skills_Stack, TOOL_STACKS } from "app/data/toolbox";
 import Image from "next/image";
+import { ScrollToTopButton } from "@/app/components/ScrollToTopButton";
+
 
 interface Project {
   title: string;
@@ -214,6 +216,8 @@ export default function ProjectPage() {
 
       <br />
       <br />
+      <ScrollToTopButton />
+
     </div>
   );
 }

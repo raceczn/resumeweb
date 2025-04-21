@@ -9,6 +9,8 @@ import Image from "next/image";
 import { GridWrapper } from "./components/GridWrapper";
 import { ShadowBox } from "@/app/components/ShadowBox";
 import { AboutTrackPattern } from "@/app/components/AboutTrackPattern";
+import { ScrollToTopButton } from "./components/ScrollToTopButton";
+
 
 export default async function Home() {
   const allPublishedBlogPosts = await fetchAndSortBlogPosts();
@@ -212,6 +214,9 @@ export default async function Home() {
           <GetinTouch />
         </section>
       </div>
+
+      <ScrollToTopButton />
+
     </section>
   );
 }

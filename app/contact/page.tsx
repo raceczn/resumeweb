@@ -14,6 +14,8 @@ import {
 } from "react-icons/fi";
 import { getTimeOfDayGreeting } from "app/lib/utils";
 import { GridWrapper } from "@/app/components/GridWrapper";
+import { ScrollToTopButton } from "@/app/components/ScrollToTopButton";
+
 
 function ContactContent() {
   const socialLinks = [
@@ -147,6 +149,8 @@ export default function ContactPage() {
       </div>
       <br />
       <br />
+            <ScrollToTopButton />
+      
     </div>
   );
 }

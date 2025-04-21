@@ -7,6 +7,7 @@ import { CurrentlyPlayingBento } from "@/app/components/CurrentlyPlayingBento";
 import { ScrapbookBento } from "@/app/components/ScrapbookBento";
 import { ToolboxBento } from "@/app/components/ToolboxBento";
 import { CurrentlyReadingBento } from "@/app/components/CurrentlyReadingBento";
+import { ScrollToTopButton } from "@/app/components/ScrollToTopButton";
 
 type Talk = {
   conference: string;
@@ -305,6 +306,7 @@ export default function FuturePlansPage() {
           </section>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }
