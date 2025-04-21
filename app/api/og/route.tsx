@@ -1,6 +1,8 @@
 import { siteMetadata } from "@/app/data/siteMetadata";
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import Image from 'next/image';
+
 // import fs from "fs";
 // import path from "path";
 
@@ -60,12 +62,12 @@ export async function GET(request: NextRequest) {
             position: "relative",
           }}
         >
-          <img
+          <Image
             tw="absolute inset-0 -z-10"
             src={imageUrl}
             alt="article background image"
           />
-          <img
+          <Image
             tw="absolute inset-0 -z-10"
             src={`${baseUrl}/braydoncoyer_og_overlay.png`}
             alt="Gradient overlay"
