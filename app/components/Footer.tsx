@@ -83,11 +83,11 @@ export function Footer(): JSX.Element {
                     </ul>
                   </div>
                 ))}
-                <div>
+                <div className="w-2/3 max-w-[300px] px-4 sm:w-full sm:px-0">
                   <span className="mb-4 inline-block text-base font-medium text-text-primary">
                     Vibes 🎵
                   </span>
-                  <div className="w-[300px]">
+                  <div className="w-full max-w-[300px]">
                     <iframe
                       style={{ borderRadius: "12px" }}
                       src="https://open.spotify.com/embed/track/7MXVkk9YMctZqd1Srtv4MB?utm_source=generator"
