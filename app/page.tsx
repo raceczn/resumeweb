@@ -1,9 +1,11 @@
+
 import { GetinTouch } from "./components/GetTouch";
 import { fetchAndSortBlogPosts } from "./lib/utils";
 import { AnimatedProfilePicture } from "./components/AnimatedProfilePicture";
 import { AnimatedText } from "./components/AnimatedText";
 import { PhotoGallery } from "./components/PhotoGallery";
 import { AnimatedMobilePhotos } from "./components/AnimatedMobilePhotos";
+import Image from "next/image";
 import { GridWrapper } from "./components/GridWrapper";
 import { ShadowBox } from "@/app/components/ShadowBox";
 import { AboutTrackPattern } from "@/app/components/AboutTrackPattern";
@@ -30,7 +32,7 @@ export default async function Home() {
                 delay={HEADING_DELAY}
                 className="animate-border-glow relative mx-auto mb-2 max-w-fit rounded-full border-2 border-[#328E6E] bg-white px-4 py-1 text-sm font-semibold text-text-primary md:text-base"
               >
-                Hello! <span className="animate-wave">👋</span> I'm Rances
+                Hello! <span className="animate-wave">👋</span> I&apos;m Rances
                 Cuizon
               </AnimatedText>
 
@@ -93,7 +95,7 @@ export default async function Home() {
                 delay={PHOTOS_DELAY + 0.3}
                 className="mx-auto max-w-xl text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary"
               >
-                Here's a quick intro about me and what I love to do
+                Here&apos;s a quick intro about me and what I love to do
               </AnimatedText>
             </GridWrapper>
           </div>
@@ -110,24 +112,26 @@ export default async function Home() {
                   Who and my programming origins
                 </h2>
                 <p className="mb-6 text-base leading-8 text-text-secondary">
-                  Hi! I’m Rances Cuizon, but most people call me Race or Ranz.
-                  I'm currently pursuing a Bachelor of Science in Computer
-                  Science at Cavite State University, and my journey into
-                  programming started right there—during my college years. At
-                  first, I was just curious about how things work behind the
+                  Hi! I&apos;m Rances Cuizon, but most people call me Race or
+                  Ranz. I&apos;m currently pursuing a Bachelor of Science in
+                  Computer Science at Cavite State University, and my journey
+                  into programming started right there—during my college years.
+                  At first, I was just curious about how things work behind the
                   screen, but as I dived deeper into the fundamentals, I
-                  realized that this is what I’m meant to do. Sitting in front
-                  of a computer, solving problems, and creating something from
-                  nothing.
+                  realized that this is what I&apos;m meant to do. Sitting in
+                  front of a computer, solving problems, and creating something
+                  from nothing.
                 </p>
               </div>
               <div className="hidden lg:order-1 lg:block">
                 <div className="relative mx-auto w-fit">
                   <ShadowBox width={188} height={278}></ShadowBox>
-                  <img
+                  <Image
                     className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[-8deg] rounded-lg object-cover shadow"
                     src="/images/aboutme2.jpg"
                     alt="A headshot"
+                    width={180}
+                    height={270}
                   />
                 </div>
               </div>
@@ -143,22 +147,24 @@ export default async function Home() {
                   What truly shaped my path was becoming a Project Manager for
                   various academic and passion-driven projects. Leading a team
                   and managing technical tasks gave me a sense of responsibility
-                  and fulfillment I didn’t know I needed. I learned to take
+                  and fulfillment I didn&apos;t know I needed. I learned to take
                   things seriously, not just for the grades, but for growth.
                   Over time, I faced many challenges that helped improve my
-                  leadership and problem-solving skills. I’m proud to be part of
-                  successful projects, whether it’s building mobile apps or
-                  responsive web interfaces. I enjoy every part of the
+                  leadership and problem-solving skills. I&apos;m proud to be
+                  part of successful projects, whether it&apos;s building mobile
+                  apps or responsive web interfaces. I enjoy every part of the
                   process—from ideation to execution.
                 </p>
               </div>
               <div className="hidden lg:block">
                 <div className="relative mx-auto w-fit">
                   <ShadowBox width={188} height={278}></ShadowBox>
-                  <img
+                  <Image
                     className="absolute left-0 top-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow"
                     src="/images/aboutme3.png"
                     alt="Leadership"
+                    width={180}
+                    height={270}
                   />
                 </div>
               </div>
@@ -180,19 +186,21 @@ export default async function Home() {
                 </p>
                 <p className="mb-6 text-base leading-8 text-text-secondary">
                   My family has always been a strong foundation, motivating me
-                  to pursue my goals with determination. They’ve instilled in me
-                  values of hard work, humility, and the importance of staying
-                  grounded, which I carry with me in both my personal and
-                  professional life.
+                  to pursue my goals with determination. They&apos;ve instilled
+                  in me values of hard work, humility, and the importance of
+                  staying grounded, which I carry with me in both my personal
+                  and professional life.
                 </p>
               </div>
               <div className="hidden lg:block">
                 <div className="relative mx-auto w-fit">
                   <ShadowBox width={188} height={278}></ShadowBox>
-                  <img
+                  <Image
                     className="absolute left-0 top-0 h-[270px] w-[370px] rotate-[-8deg] rounded-lg object-cover shadow"
                     src="/images/family.jpg"
                     alt="Family"
+                    width={370}
+                    height={270}
                   />
                 </div>
               </div>

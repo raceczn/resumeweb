@@ -1,3 +1,4 @@
+import Image from "next/image"; // ✅ import next/image
 import { getTimeOfDayGreeting } from "../lib/utils";
 import { BentoCard } from "./BentoCard";
 
@@ -26,10 +27,12 @@ export function AboutMeBento({ linkTo }: { linkTo?: string }) {
               ></div>
             </div>
           </div>
-          <img
+          <Image
             className="absolute -top-1 left-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow transition-all duration-500 group-hover:rotate-[4deg] group-hover:scale-105"
             src="/braydon_headshot_1.jpeg"
             alt="A headshot"
+            width={180}
+            height={270}
           />
         </div>
       </div>

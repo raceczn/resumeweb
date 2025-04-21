@@ -21,9 +21,10 @@ export async function GET(request: NextRequest) {
     const imageName = searchParams.get("image") || "";
 
     const isDevelopment = process.env.NODE_ENV === "development";
-    const baseUrl = isDevelopment
-      ? "http://localhost:3000"
-      : siteMetadata.siteUrl;
+    const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
+  
 
     const imageUrl = imageName ? `${baseUrl}/blog/${imageName}` : "";
 

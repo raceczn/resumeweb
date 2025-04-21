@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SocialPill } from "./SocialPill";
 import { usePathname } from "next/navigation";
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type NavigationLink = {
@@ -47,10 +48,12 @@ function DesktopNav() {
     >
       <div className="w-[104px]">
         <Link href="/" aria-label="Home">
-          <img
+          <Image
             className="h-10 w-10 rounded-full object-cover transition-transform duration-300 hover:scale-105"
             src="/images/icon2.svg"
             alt="Rances' Logo"
+            width={40} // Set width and height to avoid layout shifts
+            height={40} // Adjust dimensions as needed
           />
         </Link>
       </div>
@@ -141,10 +144,12 @@ interface NavLogoProps {
 const NavLogo: React.FC<NavLogoProps> = ({ onClickCallback }) => {
   return (
     <Link href="/" onClick={() => onClickCallback(false)} aria-label="Home">
-      <img
+      <Image
         className="h-8 w-8 rounded-full object-cover"
         src="/images/icon2.svg"
         alt="Rances's Logo"
+        width={32} 
+        height={32} 
       />
     </Link>
   );

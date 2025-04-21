@@ -7,20 +7,10 @@ export function ProfilePicture() {
   const [imageSrc, setImageSrc] = useState("/braydon_headshot_1.jpeg");
   const [isChanging, setIsChanging] = useState(false);
 
-  const changeImage = () => {
-    setIsChanging(true);
-    const images = [
-      "/images/rances.png"
-      
-    ];
-    const availableImages = images.filter((img) => img !== imageSrc);
-    const randomIndex = Math.floor(Math.random() * availableImages.length);
-    setImageSrc(availableImages[randomIndex]);
-  };
-
+  // Directly set the imageSrc on mount
   useEffect(() => {
-    changeImage();
-  }, []);
+    setImageSrc("/images/rances.png");
+  }, []); // Empty dependency array ensures this only runs once on mount
 
   return (
     <div className="relative my-5 md:mt-9">
@@ -116,8 +106,7 @@ export function ProfilePicture() {
               key={imageSrc}
               className="h-[100px] w-[100px] cursor-pointer rounded-full transition-opacity hover:opacity-90"
               src={imageSrc}
-              alt=""
-              onClick={changeImage}
+              alt="Profile Picture"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}

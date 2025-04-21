@@ -21,7 +21,7 @@ export const Photo = ({
   src,
   alt,
   className,
-  direction,
+  direction = "left", // Default value for direction
   width,
   height,
   ...props
@@ -41,7 +41,7 @@ export const Photo = ({
     const randomRotation =
       getRandomNumberInRange(1, 4) * (direction === "left" ? -1 : 1);
     setRotation(randomRotation);
-  }, []);
+  }, [direction]); // Add direction to the dependency array
 
   function handleMouse(event) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -95,11 +95,11 @@ export const Photo = ({
           className={cn("rounded-lg object-cover")}
           fill
           src={src}
-          alt={alt}
+          alt="" 
           {...props}
           draggable={false}
         />
-      </div>
+      </div>  
     </motion.div>
   );
 };

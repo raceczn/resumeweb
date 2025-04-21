@@ -127,10 +127,12 @@ export default function ContactPage() {
         {/* Title */}
         <GridWrapper>
           <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
-            Let's Connect! {timeOfDayGreeting}
+            Let&apos;s Connect! {timeOfDayGreeting}
           </h1>
           <div className="mt-4 text-center text-sm font-medium text-indigo-600">
-            <span>Interested in working together? Let's make it happen!</span>
+            <span>
+              Interested in working together? Let&apos;s make it happen!
+            </span>
           </div>
         </GridWrapper>
 

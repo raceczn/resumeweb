@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useClickAnyWhere, useMediaQuery } from "usehooks-ts";
+import Image from "next/image";
 
 import { cn } from "../lib/utils";
 import { useRotationVelocity } from "../lib/useRotationVelocity";
@@ -43,7 +44,7 @@ function Sticker({
       getRandomNumberInRange(10, 25) *
         (index === 0 ? 1 : index % 2 === 0 ? -0.5 : 0.5),
     );
-  }, []);
+  }, [index]); // Added index as dependency
 
   const matches = useMediaQuery("(max-width: 768px)");
 
@@ -221,8 +222,10 @@ export function ScrapbookBento({ className }: { className?: string }) {
             caption="I want to pursue a career as a web or software developer."
             index={0}
           >
-            <img
-              width="80"
+            <Image
+              width={80}
+              height={80}
+              alt="Developer icon"
               src="/images/future/developer.png"
               className="xs:max-w-none max-w-[100px]"
               draggable={false}
@@ -232,9 +235,11 @@ export function ScrapbookBento({ className }: { className?: string }) {
             caption="Of course, my first goal is to graduate from Cavite State University (CvSU) with a degree in Computer Science."
             index={1}
           >
-            <img
-              width="96"
-              src="images/future/cvsu.png"
+            <Image
+              width={96}
+              height={96}
+              alt="CvSU logo"
+              src="/images/future/cvsu.png"
               className="xs:max-w-none max-w-[100px]"
               draggable={false}
             />
@@ -243,8 +248,10 @@ export function ScrapbookBento({ className }: { className?: string }) {
             caption="One of my biggest dreams is to work at Google someday."
             index={2}
           >
-            <img
-              width="130"
+            <Image
+              width={130}
+              height={130}
+              alt="Google logo"
               src="/images/future/google.png"
               className=""
               draggable={false}
@@ -254,8 +261,10 @@ export function ScrapbookBento({ className }: { className?: string }) {
             caption="I aim to earn my AWS Certified Cloud Practitioner certification to deepen my knowledge in cloud computing."
             index={3}
           >
-            <img
-              width="160"
+            <Image
+              width={160}
+              height={160}
+              alt="AWS certification"
               src="/images/future/aws_cert.png"
               draggable={false}
               className="xs:max-w-none"

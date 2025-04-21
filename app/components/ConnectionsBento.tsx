@@ -3,6 +3,7 @@
 import { BentoCard } from "./BentoCard";
 import { motion, useAnimation } from "framer-motion";
 import clsx from "clsx";
+import Image from "next/image";
 
 export function ConnectionsBento({
   linkTo,
@@ -95,10 +96,12 @@ export function ConnectionsBento({
                   </filter>
                 </defs>
               </svg>
-              <img
+              <Image
                 className="absolute left-1/2 top-1/2 h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 transform rounded-full"
                 src="/images/rances.png"
                 alt="Meeee"
+                width={100}
+                height={100}
               />
             </div>
           </span>
@@ -160,40 +163,48 @@ export function ConnectionsBento({
               sizeClass="w-10 h-10"
               className="absolute left-4 top-6 md:left-24"
             >
-              <img
+              <Image
                 className="h-full w-full rounded-full object-cover"
                 src="/images/future/leniRobredo.png"
                 alt="Connection"
+                width={40}
+                height={40}
               />
             </ConnectionCircle>
             <ConnectionCircle
               sizeClass="w-12 h-12"
               className="absolute bottom-20 left-14 md:left-52"
             >
-              <img
+              <Image
                 className="h-full w-full rounded-full object-cover"
                 src="/images/future/iu.jpeg"
                 alt="Connection"
+                width={48}
+                height={48}
               />
             </ConnectionCircle>
             <ConnectionCircle
               sizeClass="w-14 h-14"
               className="absolute right-16 top-4 md:right-52"
             >
-              <img
+              <Image
                 className="h-full w-full rounded-full object-cover"
                 src="/images/future/seventeen.jpg"
                 alt="Connection"
+                width={56}
+                height={56}
               />
             </ConnectionCircle>
             <ConnectionCircle
               sizeClass="w-11 h-11"
               className="absolute bottom-20 right-4 md:right-12"
             >
-              <img
+              <Image
                 className="h-full w-full rounded-full object-cover"
                 src="/images/future/cup-of-joe-ftr.jpg"
                 alt="Connection"
+                width={44}
+                height={44}
               />
             </ConnectionCircle>
           </span>
@@ -344,10 +355,12 @@ function AnimatedConnectionCircle({
       className={`absolute ${sizeClass} ${paddingClass} z-10`}
     >
       <ConnectionCircle sizeClass="w-full h-full" paddingClass={paddingClass}>
-        <img
+        <Image
           className="h-full w-full rounded-full object-cover"
           src={src}
           alt="Connection"
+          width={64}
+          height={64}
         />
       </ConnectionCircle>
     </motion.div>

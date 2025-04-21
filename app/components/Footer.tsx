@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SocialPill } from "./SocialPill";
 import { GridWrapper } from "./GridWrapper";
+import Image from "next/image";
 
 interface FooterLink {
   href: string;
@@ -46,10 +47,12 @@ export function Footer(): JSX.Element {
               <div>
                 <div className="flex-grow space-y-6">
                   <Link href="/" aria-label="Home">
-                    <img
-                      className="h-10 w-10 rounded-full object-cover transition-transform duration-300 hover:scale-105"
+                    <Image
+                      className="rounded-full object-cover transition-transform duration-300 hover:scale-105"
                       src="/images/icon2.svg"
                       alt="Rances' Logo"
+                      width={40}
+                      height={40}
                     />
                   </Link>
                   <p className="w-60 leading-5 text-gray-500">
@@ -87,7 +90,7 @@ export function Footer(): JSX.Element {
                   <div className="w-[300px]">
                     <iframe
                       style={{ borderRadius: "12px" }}
-                      src="https://open.spotify.com/embed/track/5GXAXm5YOmYT0kL5jHvYBt?utm_source=generator"
+                      src="https://open.spotify.com/embed/track/7MXVkk9YMctZqd1Srtv4MB?utm_source=generator"
                       width="100%"
                       height="100"
                       frameBorder="0"

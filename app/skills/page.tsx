@@ -3,8 +3,9 @@ import { GridWrapper } from "@/app/components/GridWrapper";
 import { Training } from "@/app/components/training_experiences";
 import Achievements from "./achievements";
 import { Skills_Stack, TOOL_STACKS } from "@/app/data/toolbox";
-
+import Image from "next/image";
 import SkillList from "../components/SkillList";
+import { Suspense } from "react";
 
 export default function SkillsPage() {
   return (
@@ -30,7 +31,8 @@ export default function SkillsPage() {
           <GridWrapper>
             <div className="text-center text-sm font-medium text-indigo-600">
               <span>
-                My professional skills and development tools I work with.
+                These are the professional skills and development tools I work
+                with.
               </span>
             </div>
           </GridWrapper>
@@ -55,10 +57,12 @@ export default function SkillsPage() {
                           boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset",
                         }}
                       >
-                        <img
+                        <Image
                           className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10"
                           alt={item.title}
                           src={item.imgSrc}
+                          width={40}
+                          height={40}
                         />
                       </div>
                     </div>
@@ -72,7 +76,7 @@ export default function SkillsPage() {
               ))}
           </div>
         </GridWrapper>
-              <br />
+        <br />
         {/* Training */}
         <div className="relative space-y-8 text-center">
           <div className="space-y-4">
@@ -97,7 +101,7 @@ export default function SkillsPage() {
           <div className="space-y-4">
             <GridWrapper>
               <h2 className="mx-auto max-w-xl text-balance text-3xl font-medium leading-[40px] tracking-tighter text-text-primary">
-                Look what I've earned.{" "}
+                <span>Look what I&apos;ve earned.</span>
               </h2>
             </GridWrapper>
             <GridWrapper>
@@ -112,9 +116,11 @@ export default function SkillsPage() {
         </div>
 
         <div className="space-y-16">
-          <GridWrapper>
+          <Suspense fallback={<div>Loading...</div>}>
+            {" "}
+            {/* Suspense boundary */}
             <Achievements />
-          </GridWrapper>
+          </Suspense>
         </div>
 
         <br />

@@ -2,6 +2,7 @@ import { BsGithub as GithubIcon } from "react-icons/bs";
 import { FiExternalLink as LinkIcon } from "react-icons/fi";
 import { GridWrapper } from "@/app/components/GridWrapper";
 import { Skills_Stack, TOOL_STACKS } from "app/data/toolbox";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -65,7 +66,6 @@ const projects: Project[] = [
     github: "https://github.com/RON2814/enrollment-system",
     stacks: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind CSS"],
   },
-
   {
     title: "Anime Hunt",
     description:
@@ -106,7 +106,13 @@ const projects: Project[] = [
 
 function ProjectImage(props) {
   return (
-    <img src={props.src} alt={props.alt} className="drama-shadow rounded-lg" />
+    <Image
+      src={props.src}
+      alt={props.alt}
+      className="drama-shadow rounded-lg"
+      width={500} // Set appropriate width
+      height={300} // Set appropriate height
+    />
   );
 }
 
@@ -117,7 +123,7 @@ export default function ProjectPage() {
 
       <GridWrapper>
         <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
-          A collection of my projects I've worked on.
+          A collection of my projects I&apos;ve worked on.
         </h1>
       </GridWrapper>
       <GridWrapper>
@@ -131,7 +137,7 @@ export default function ProjectPage() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-[#F8FAFC] hover:bg-[#FBFBFB] p-4 shadow-md transition hover:shadow-lg"
+              className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-[#F8FAFC] p-4 shadow-md transition hover:bg-[#FBFBFB] hover:shadow-lg"
             >
               <div className="mb-4">
                 <ProjectImage src={project.image} alt={project.title} />
@@ -156,11 +162,14 @@ export default function ProjectPage() {
                       );
                       return tool ? (
                         <div key={stack} className="group relative">
-                          <img
+                          <Image
                             src={tool.imgSrc}
                             alt={tool.title}
+                            width={24}
+                            height={24}
                             className="h-6 w-6 transition-transform duration-200 hover:scale-110"
                           />
+
                           <span className="absolute -top-8 left-1/2 z-10 -translate-x-1/2 transform whitespace-nowrap rounded-md bg-gray-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                             {tool.title}
                           </span>

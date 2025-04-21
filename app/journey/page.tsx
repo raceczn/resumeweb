@@ -154,7 +154,7 @@ export default function JourneyPage() {
                       width={140}
                       height={140}
                       src="/images/rancesp2.png"
-                      alt="Rances pogi "
+                      alt=""
                       direction="left"
                     />
                   </div>
@@ -163,7 +163,7 @@ export default function JourneyPage() {
                       width={140}
                       height={140}
                       src="/images/coffee.png"
-                      alt="Drinks with code"
+                      alt=""
                       direction="right"
                     />
                   </div>
@@ -172,7 +172,7 @@ export default function JourneyPage() {
                       width={140}
                       height={140}
                       src="/images/coffee2.png"
-                      alt="Holding drinks"
+                      alt=""
                       direction="left"
                     />
                   </div>

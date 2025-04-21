@@ -124,7 +124,7 @@ export default function FuturePlansPage() {
                   width={270}
                   height={270}
                   src="/images/future/future.jpg"
-                  alt="working while enjoying life "
+                  alt="Working while enjoying life photo"
                   direction="right"
                 />
               </span>
@@ -137,7 +137,7 @@ export default function FuturePlansPage() {
                   width={404}
                   height={270}
                   src="/images/future/travel.jpg"
-                  alt="Travelling"
+                  alt="Travelling photo"
                   direction="left"
                   className="h-full w-full object-cover"
                 />
@@ -151,7 +151,7 @@ export default function FuturePlansPage() {
                   width={180}
                   height={270}
                   src="/images/future/developer.jpg"
-                  alt="Developer"
+                  alt="Developer photo"
                   direction="right"
                 />
               </span>

@@ -151,7 +151,7 @@ export const PhotoGallery = ({
                   width={220}
                   height={220}
                   src={photo.src}
-                  alt="Family photo"
+                  alt="Family Photo"
                   direction={photo.direction}
                 />
               </motion.div>
