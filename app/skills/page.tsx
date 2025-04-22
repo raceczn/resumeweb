@@ -33,7 +33,7 @@ export default function SkillsPage() {
           <GridWrapper>
             <div className="text-center text-sm font-medium text-indigo-600">
               <span>
-                These are the professional skills and development tools I work
+                These are the professional Skills and development tools I work
                 with.
               </span>
             </div>

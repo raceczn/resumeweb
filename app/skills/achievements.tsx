@@ -24,7 +24,7 @@ const staticData: AchievementItem[] = [
     is_show: true,
   },
   {
-    id: 1,
+    id: 2,
     credential_id: "Academic Awards",
     name: "Gawad Parangal 2023 - Student Excellence Award",
     issuing_organization: "Cavite State University",
@@ -48,7 +48,7 @@ const staticData: AchievementItem[] = [
     is_show: true,
   },
   {
-    id: 2,
+    id: 1,
     credential_id: "Certification",
     name: "Javascript Algorithms and Data Structures",
     issuing_organization: "FreeCodeCamp",
