@@ -3,51 +3,53 @@ import { unstable_noStore as noStore } from "next/cache";
 import { notFound } from "next/navigation";
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+
 export const formatDate = (date: string) => {
   noStore();
-  let currentDate = new Date();
+
+  const formatter = new Intl.DateTimeFormat("en-PH", {
+    timeZone: "Asia/Manila",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  let now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }));
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
   }
-  let targetDate = new Date(date);
+  let target = new Date(new Date(date).toLocaleString("en-US", { timeZone: "Asia/Manila" }));
 
-  let yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
-  let monthsAgo = currentDate.getMonth() - targetDate.getMonth();
-  let daysAgo = currentDate.getDate() - targetDate.getDate();
+  const yearsAgo = now.getFullYear() - target.getFullYear();
+  const monthsAgo = now.getMonth() - target.getMonth();
+  const daysAgo = now.getDate() - target.getDate();
 
-  let formattedDate = "";
-
+  let formattedRelative = "Today";
   if (yearsAgo > 0) {
-    formattedDate = `${yearsAgo}y ago`;
+    formattedRelative = `${yearsAgo}y ago`;
   } else if (monthsAgo > 0) {
-    formattedDate = `${monthsAgo}mo ago`;
+    formattedRelative = `${monthsAgo}mo ago`;
   } else if (daysAgo > 0) {
-    formattedDate = `${daysAgo}d ago`;
-  } else {
-    formattedDate = "Today";
+    formattedRelative = `${daysAgo}d ago`;
   }
 
-  let fullDate = targetDate.toLocaleString("en-us", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-
-  return `${fullDate} (${formattedDate})`;
+  return `${formatter.format(target)} (${formattedRelative})`;
 };
 
+
 export const getTimeOfDayGreeting = () => {
-  const now = new Date();
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }));
   const hours = now.getHours();
 
   if (hours < 12) {
-    return "Good morning!";
+    return "Good morning!🌞";
   } else if (hours < 17) {
-    return "Good afternoon!";
+    return "Good afternoon! 🌤️";
   } else {
-    return "Good evening!";
+    return "Good evening!🌙";
   }
 };
+
 
 export const cx = (...classes) => classes.filter(Boolean).join(" ");
 
