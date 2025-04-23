@@ -13,8 +13,13 @@ export default function ResumePage() {
 
         <GridWrapper>
           <h1 className="mx-auto max-w-2xl text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
-            View my Curriculum Vitae
+            My Curriculum Vitae
           </h1>
+          <div className="mt-4 text-center text-sm font-medium text-indigo-600">
+            <span>
+              A visual representation of my educational background, work experience, and skills.
+            </span>
+          </div>
         </GridWrapper>
         <GridWrapper className="py-4">
           <Button
