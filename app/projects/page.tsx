@@ -111,9 +111,9 @@ function ProjectImage(props) {
     <Image
       src={props.src}
       alt={props.alt}
-      className="drama-shadow rounded-lg"
-      width={500} // Set appropriate width
-      height={300} // Set appropriate height
+      className="drama-shadow rounded-lg transition-transform duration-500 ease-in-out hover:scale-[1.02]"
+      width={500} 
+      height={300} 
     />
   );
 }
