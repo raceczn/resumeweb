@@ -237,7 +237,7 @@ export function ScrapbookBento({ className }: { className?: string }) {
           >
             <Image
               width={96}
-              height={96}
+              height={106}
               alt="CvSU logo"
               src="/images/future/cvsu.png"
               className="xs:max-w-none max-w-[100px]"

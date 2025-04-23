@@ -56,7 +56,7 @@ export function Footer(): JSX.Element {
                     />
                   </Link>
                   <p className="w-60 leading-5 text-gray-500">
-                    @raceczn. Welcome to my website! Inspired by Braydon.
+                    @raceczn. Passion meets design! 2025 © All rights reserved.
                   </p>
                 </div>
                 <p className="mt-6 text-gray-500">
