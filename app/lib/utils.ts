@@ -36,17 +36,20 @@ export const formatDate = (date: string) => {
   return `${formatter.format(target)} (${formattedRelative})`;
 };
 
-
 export const getTimeOfDayGreeting = () => {
-  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }));
-  const hours = now.getHours();
+  const nowInManila = new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Manila",
+  });
 
-  if (hours < 12) {
-    return "Good morning!🌞";
-  } else if (hours < 17) {
+  const manilaDate = new Date(nowInManila);
+  const hour = manilaDate.getHours();
+
+  if (hour >= 0 && hour < 12) {
+    return "Good morning! 🌞";
+  } else if (hour >= 12 && hour < 18) {
     return "Good afternoon! 🌤️";
   } else {
-    return "Good evening!🌙";
+    return "Good evening! 🌙";
   }
 };
 
