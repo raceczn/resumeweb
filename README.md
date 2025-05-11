@@ -31,7 +31,7 @@ A personal portfolio website built using Next.js, React, TypeScript, and CSS, cr
 ## 🛠️ Installation
 ### 1. Clone the Repository
 ```bash
-  git clone <https://github.com/raceczn/portfolioweb>
+  git clone <https://github.com/raceczn/v3.raceczn-portfolio.git>
 ```
 ### 2. Install dependencies
 ```bash
